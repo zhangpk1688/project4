@@ -26,8 +26,8 @@ function timeChunk(data, fn, count = 1, wait) {
     }
 }
 
-// 测试用例
-let arr = [];
+
+let arr = [];// 测试用例
 for (let i = 0; i < 100000; i++) {  // 这里跑了10万数据
     arr.push(i);
 }

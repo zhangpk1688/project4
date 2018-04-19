@@ -5,9 +5,9 @@
 
 
 #### 渲染数据js脚本
-function timeChunk(data, fn, count = 1, wait) {
+```
+ function timeChunk(data, fn, count = 1, wait) {
     let obj, timer;
-
     function start() {
         let len = Math.min(count, data.length);
         for (let i = 0; i < len; i++) {
@@ -15,7 +15,6 @@ function timeChunk(data, fn, count = 1, wait) {
             fn(val);
         }
     }
-
     return function() {
         timer = setInterval(function() {
             if (data.length === 0) {    // 如果数据为空了，就清空定时器
@@ -25,7 +24,6 @@ function timeChunk(data, fn, count = 1, wait) {
         }, wait);   // 分批执行的时间间隔
     }
 }
-
 
 let arr = [];// 测试用例
 for (let i = 0; i < 100000; i++) {  // 这里跑了10万数据
